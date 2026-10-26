@@ -1,0 +1,12 @@
+/**
+ * 样式入口：按原 `styles.css` 的分区顺序串接，保证层叠覆盖关系不变。
+ * 顺序调整会改变同优先级选择器的胜出者，新增分区请追加在末尾。
+ */
+@import './tokens.css';
+@import './layout.css';
+@import './interaction.css';
+@import './canvas.css';
+@import './panels.css';
+@import './dialogs.css';
+@import './feedback.css';
+@import './dataViews.css';

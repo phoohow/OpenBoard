@@ -1,0 +1,124 @@
+/* ---------- 历史版本 ---------- */
+
+.save-version-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.save-version-row .text-input {
+  flex: 1;
+}
+
+.version-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.version-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.version-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.version-meta strong {
+  font-size: 13px;
+}
+
+.version-meta span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ---------- 画布统计 ---------- */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.stat-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 8px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--line-soft);
+}
+
+.stat-cell strong {
+  font-size: 22px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-cell span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.stat-title {
+  margin: 4px 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.stat-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 13px;
+}
+
+.stat-list li strong {
+  font-variant-numeric: tabular-nums;
+  color: #4327c4;
+}
+
+/* ---------- 查找替换 ---------- */
+
+.replace-row {
+  margin-top: 6px;
+}
+
+.btn.sm {
+  height: 28px;
+  padding: 0 10px;
+  font-size: 12px;
+  flex: none;
+}

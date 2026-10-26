@@ -1,0 +1,259 @@
+/* ---------- 演示与互动 ---------- */
+
+.present-bar {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  background: rgba(24, 22, 30, 0.92);
+  color: #fff;
+  box-shadow: var(--shadow-lg);
+}
+
+.present-bar .btn.ghost {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.present-bar .btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.present-bar .chip {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.present-bar .chip:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.present-bar .chip.active {
+  background: var(--brand);
+  border-color: var(--brand);
+}
+
+.present-bar .icon-btn {
+  color: #fff;
+}
+
+.present-page,
+.present-chip-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.present-count {
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.present-title {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.reaction-chip {
+  font-size: 16px;
+  padding: 4px 10px;
+}
+
+.chip.slim {
+  padding: 4px 8px;
+  font-size: 11px;
+}
+
+.canvas-wrap.laser {
+  cursor: none;
+}
+
+.laser-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border-radius: 50%;
+  background: #ff3b3b;
+  box-shadow: 0 0 0 6px rgba(255, 59, 59, 0.28), 0 0 26px 10px rgba(255, 59, 59, 0.4);
+  pointer-events: none;
+  z-index: 50;
+}
+
+.reaction {
+  position: absolute;
+  font-size: 34px;
+  pointer-events: none;
+  z-index: 55;
+  animation: reaction-float 2.4s ease-out forwards;
+}
+
+@keyframes reaction-float {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.6);
+  }
+  18% {
+    opacity: 1;
+    transform: translateY(-12px) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-160px) scale(1);
+  }
+}
+
+.comment-input {
+  width: 100%;
+  min-height: 62px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  font: inherit;
+  font-size: 12px;
+  color: var(--text);
+  resize: vertical;
+  outline: none;
+}
+
+.comment-input:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-soft);
+}
+
+.comment-list,
+.vote-list {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.comment-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 8px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+}
+
+.comment-list li.resolved p {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.comment-list p {
+  flex: 1;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.comment-list em,
+.vote-count {
+  font-size: 11px;
+  font-style: normal;
+  color: var(--muted);
+}
+
+.vote-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  font-size: 12px;
+}
+
+.vote-rank {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vote-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.route-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.route-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  font-size: 13px;
+}
+
+.route-index {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.route-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icon-btn.danger {
+  color: var(--danger);
+}
+
+.asset-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.asset-grid button {
+  justify-content: center;
+  font-size: 12px;
+  padding: 9px 6px;
+}
+
